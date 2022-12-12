@@ -1,7 +1,6 @@
 # Create annual temperature-based survival metric
 # M. Espe
 # 2022 Nov 17
-setwd("C:/Users/Braden DeMattei/Dropbox (Cramer Fish Sciences)/Braden DeMattei/RedBluff/2022/EspeTM/2022-shasta_winter_run_survival-main")
 
 library(readxl)
 temp_file = "data/SacRiverTemperatures_1990_22.xlsx"

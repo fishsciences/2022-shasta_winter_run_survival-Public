@@ -1,0 +1,84 @@
+---
+title: "Flow and temperature effects on juvenile Winter-run survival - supplemental"
+subtitle: "Prepared for Cramer Fish Sciences"
+author: "Matt Espe"
+date: "2022 Nov 29"
+header-includes:
+- \usepackage{pdflscape}
+output: "pdf_document"
+---
+
+These are the model results when the IOS and Martin egg mortality
+metric are excluded.
+
+```{=latex}
+% latex table generated in R 4.2.2 by xtable 1.8-4 package
+% Tue Nov 29 14:10:43 2022
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & 40.4851 & 21.8469 & 1.85 & 0.0803 \\ 
+  Year & -0.0206 & 0.0109 & -1.89 & 0.0743 \\ 
+  Eggs & -0.0000 & 0.0000 & -3.89 & 0.0011 \\ 
+  ndays\_over53F & -0.0074 & 0.0028 & -2.61 & 0.0177 \\ 
+  ndays\_over56F & -0.0216 & 0.0063 & -3.42 & 0.0031 \\ 
+  Fry\_Low\_Flow\_Days & -0.0147 & 0.0043 & -3.44 & 0.0029 \\ 
+   \hline
+\end{tabular}
+\end{table}
+```
+
+```{=latex}
+% latex table generated in R 4.2.2 by xtable 1.8-4 package
+% Tue Nov 29 14:11:38 2022
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrr}
+  \hline
+Predictor & R2 & Rank \\ 
+  \hline
+Year & 0.10 & 4.00 \\ 
+  Eggs & 0.10 & 5.00 \\ 
+  ndays\_over53F & 0.28 & 1.00 \\ 
+  ndays\_over56F & 0.20 & 2.00 \\ 
+  Fry\_Low\_Flow\_Days & 0.18 & 3.00 \\ 
+   \hline
+\end{tabular}
+\end{table}
+```
+
+
+\newpage
+```{=latex}
+% latex table generated in R 4.2.2 by xtable 1.8-4 package
+% Tue Nov 29 14:09:40 2022
+\begin{landscape}
+% latex table generated in R 4.2.2 by xtable 1.8-4 package
+% Tue Nov 29 14:13:09 2022
+\begin{table}[ht]
+\centering
+\begin{tabular}{|p{0.6\linewidth}|r|r|r|r|r|}
+  \hline
+Model & K & AICc & Delta AICc & AICc weight & log-Likelihood \\ 
+  \hline
+log(R/S) \~{} Year + Eggs + N days over 53F + N days over 56F + Fry Low Flow Days &   7 & 30.32 & 0.00 & 0.87 & -4.66 \\ 
+   \hline
+log(R/S) \~{} Year + Eggs + Flow (weighted) + N days over 53F + N days over 56F + Fry Low Flow Days &   8 & 34.35 & 4.03 & 0.12 & -4.38 \\ 
+   \hline
+log(R/S) \~{} Year + Eggs + Flow (weighted) + N days over 53F + N days over 56F + Fry Flow + Fry Low Flow Days &   9 & 38.68 & 8.36 & 0.01 & -3.91 \\ 
+   \hline
+log(R/S) \~{} Year + Eggs + Flow (weighted) + N days over 53F + N days over 56F + Spawn DO + Fry Flow + Fry Low Flow Days &  10 & 44.23 & 13.91 & 0.00 & -3.66 \\ 
+   \hline
+log(R/S) \~{} Year + Eggs + Flow (weighted) + N days over 53F + N days over 56F + Spawn DO + Spawn Flow + Fry Flow + Fry Low Flow Days &  11 & 51.30 & 20.98 & 0.00 & -3.65 \\ 
+   \hline
+log(R/S) \~{} Year + Eggs + Flow (weighted) + N days over 53F + N days over 56F + Spawn DO + Fry Temp + Spawn Flow + Fry Flow + Fry Low Flow Days &  12 & 59.66 & 29.34 & 0.00 & -3.65 \\ 
+   \hline
+log(R/S) \~{} Year + Eggs + Flow (weighted) + N days over 53F + N days over 56F + Spawn Turbidity + Spawn DO + Fry Temp + Spawn Flow + Fry Flow + Fry Low Flow Days &  13 & 69.70 & 39.38 & 0.00 & -3.65 \\ 
+   \hline
+\end{tabular}
+\end{table}
+\end{landscape}
+```

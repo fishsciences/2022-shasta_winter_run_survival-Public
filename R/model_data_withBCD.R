@@ -20,6 +20,8 @@ vars = c("Year", "Eggs", "flow_weighted",
 #------------------------------------------------------------------------------#
 # Egg to fry survival
 # Manual forward stepwise
+n1 = lm(log_egg_to_fry_surv ~ Eggs, jpi)
+
 m2d = lm(log_egg_to_fry_surv ~ Eggs + martin_surv_weighted, jpi)
 
 m4a = lm(log_egg_to_fry_surv ~ Eggs + flow_weighted, jpi)
@@ -30,7 +32,7 @@ b2 = lm(log_egg_to_fry_surv ~ Eggs + ndays_over53F, jpi)
 
 b2a = lm(log_egg_to_fry_surv ~ Eggs + ndays_over53F + flow_weighted, jpi)
 
-mod_list2 = list(m2d, m4a, b1, b2, b2a)
+mod_list2 = list(n1, m2d, m4a, b1, b2, b2a)
 names(mod_list2) = mod_nm2 = as.character(unlist(sapply(mod_list2, formula)))
 aictab(mod_list2, modnames = mod_nm2)
 
@@ -67,4 +69,4 @@ for(v in plot_vars){
 }
 dev.off()
 
-
+#------------------------------------------------------------------------------#

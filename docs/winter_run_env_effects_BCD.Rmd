@@ -1,0 +1,57 @@
+---
+title: "Flow and temperature effects on juvenile Winter-run survival: Braden Models"
+subtitle: "Prepared for Cramer Fish Sciences"
+author: "Braden DeMattei (Using code from Matt Espe)"
+date: "2022 Dec 9"
+header-includes:
+- \usepackage{pdflscape}
+output: "pdf_document"
+---
+```{r echo = FALSE}
+#source("R/model_data.R")
+```
+
+![Univariate plots of predictors vs. log(R/S).](single_var.png)
+
+```{=latex}
+\begin{landscape}
+% latex table generated in R 4.2.0 by xtable 1.8-4 package
+% Mon Dec 12 13:04:44 2022
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+  \hline
+Model & K & AICc & Delta AICc & AICc weight & log-Likelihood \\ 
+  \hline
+log(R/S) \~{} Eggs + Flow (weighted) + Martin surv. (weighted) &   5 & 24.26 & 0.00 & 0.96 & -5.46 \\ 
+   \hline
+log(R/S) \~{} Eggs + N days over 53F + Flow (weighted) &   5 & 30.68 & 6.42 & 0.04 & -8.68 \\ 
+   \hline
+log(R/S) \~{} Eggs + Flow (weighted) &   4 & 35.78 & 11.52 & 0.00 & -12.84 \\ 
+   \hline
+log(R/S) \~{} Eggs + Martin surv. (weighted) &   4 & 36.51 & 12.25 & 0.00 & -13.20 \\ 
+   \hline
+log(R/S) \~{} Eggs + N days over 53F &   4 & 40.21 & 15.95 & 0.00 & -15.05 \\ 
+   \hline
+log(R/S) \~{} Eggs &   3 & 63.07 & 38.81 & 0.00 & -27.94 \\ 
+   \hline
+\end{tabular}
+\end{table}
+% latex table generated in R 4.2.2 by xtable 1.8-4 package
+% Mon Nov 28 18:15:48 2022
+\begin{table}[ht]
+\caption{Model parameter estimates for the model with the highest predictive performance (according to AICc).} 
+\centering
+\begin{tabular}{lrrrr}
+  \hline
+ & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & -1.6946 & 0.0680 & -24.91 & 0.0000 \\ 
+  Eggs (scaled) & -0.3461 & 0.0733 & -4.72 & 0.0001 \\ 
+  Flow (weighted and scaled) & 0.4072 & 0.0956 & 4.26 & 0.0004 \\ 
+  Martin surv. (weighted and scaled) & 0.3784 & 0.0919 & 4.12 & 0.0005 \\ 
+   \hline
+\end{tabular}
+\end{table}
+\end{landscape}
+```
